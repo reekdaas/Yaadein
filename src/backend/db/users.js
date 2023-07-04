@@ -29,7 +29,7 @@ export const users = [
     avatarUrl:
       "https://res.cloudinary.com/dqz5b6jq9/image/upload/v1688041213/6_zzhx0q.jpg",
     website: "https://adarshbalika.netlify.app",
-    createdAt: "2022-01-01T10:55:06+05:30",
+    createdAt: "2023-04-10T10:55:06+05:30",
     updatedAt: formatDate(),
   },
   {
@@ -43,7 +43,7 @@ export const users = [
     avatarUrl:
       "https://res.cloudinary.com/dqz5b6jq9/image/upload/v1688041213/5_u91fuz.jpg",
     website: "https://google.com/",
-    createdAt: "https://adarshbalika.netlify.app",
+    createdAt: "2023-05-12T10:55:06+05:30",
     updatedAt: formatDate(),
   },
   {
@@ -57,7 +57,7 @@ export const users = [
     avatarUrl:
       "https://res.cloudinary.com/dqz5b6jq9/image/upload/v1688041213/1_iq9wy8.jpg",
     website: "https://adarshbalika.netlify.app",
-    createdAt: "2022-01-01T10:55:06+05:30",
+    createdAt: "2023-05-30T10:55:06+05:30",
     updatedAt: formatDate(),
   },
   {
@@ -71,7 +71,7 @@ export const users = [
     avatarUrl:
       "https://res.cloudinary.com/dqz5b6jq9/image/upload/v1688041213/2_hj9sy7.jpg",
     website: "https://adarshbalika.netlify.app",
-    createdAt: "2022-01-03T10:55:06+05:30",
+    createdAt: "2023-06-21T10:55:06+05:30",
     updatedAt: formatDate(),
   },
 
@@ -86,7 +86,7 @@ export const users = [
     avatarUrl:
       "https://res.cloudinary.com/dqz5b6jq9/image/upload/v1688041213/3_ddoadg.jpg",
     website: "https://adarshbalika.netlify.app",
-    createdAt: "2022-01-04T10:55:06+05:30",
+    createdAt: "2023-06-10T10:55:06+05:30",
     updatedAt: formatDate(),
   },
 
@@ -101,7 +101,7 @@ export const users = [
     avatarUrl:
       "https://res.cloudinary.com/dqz5b6jq9/image/upload/v1688041214/7_sgrl3j.jpg",
     website: "https://adarshbalika.netlify.app",
-    createdAt: "2022-01-05T10:55:06+05:30",
+    createdAt: "2023-05-20T10:55:06+05:30",
     updatedAt: formatDate(),
   },
 
@@ -116,7 +116,7 @@ export const users = [
     avatarUrl:
       "https://res.cloudinary.com/dqz5b6jq9/image/upload/v1688041828/photo-1490195117352-aa267f47f2d9_k6g0rc.jpg",
     website: "https://adarshbalika.netlify.app",
-    createdAt: "2022-01-06T10:55:06+05:30",
+    createdAt: "2023-06-30T10:55:06+05:30",
     updatedAt: formatDate(),
   },
 ];
