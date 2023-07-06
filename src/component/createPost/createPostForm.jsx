@@ -87,6 +87,7 @@ export default function CreatePostForm() {
 
           <button
             type="submit"
+            disabled={!post?.content}
             className={
               btnDisabled || !post?.content
                 ? `${styles.createPostBtn} ${styles.disableBtn} `
