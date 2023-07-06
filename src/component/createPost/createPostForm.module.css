@@ -1,0 +1,76 @@
+.createPostFormCard {
+  display: flex;
+  align-items: flex-start;
+  border: 2px solid var(--clr-gray-1);
+  border-radius: 1rem;
+  color: #fff;
+  background-color: var(--clr-black-3);
+  opacity: 1;
+  padding: 1.5rem 1rem;
+}
+
+.userImage {
+  height: 50px;
+  width: 50px;
+  object-fit: cover;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.createPostForm {
+  display: flex;
+  flex-grow: 1;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.createPostText {
+  background-color: inherit;
+  /* border: 1px solid #000; */
+  border: none;
+  resize: none;
+  min-width: 30rem;
+  color: #fff;
+}
+
+.createPostText:focus {
+  outline: none;
+  color: #fff;
+}
+
+.createPostContainer {
+  display: flex;
+  padding: 0.5rem 0 0;
+  justify-content: space-between;
+  position: relative;
+}
+
+.createPostEmoji {
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+
+.createPostBtn {
+  padding: 0.5rem 1rem;
+  border-radius: 5%;
+  border: none;
+  font-weight: 800;
+  cursor: pointer;
+  height: 2rem;
+  text-align: center;
+  background-color: var(--clr-black-1);
+  color: #fff;
+  letter-spacing: 0.3ch;
+}
+
+.createPostBtn:hover {
+  background-color: var(--clr-black-2);
+}
+.emojiPicker {
+  position: absolute;
+  top: 100%;
+}
+
+.disableBtn {
+  cursor: not-allowed;
+}
