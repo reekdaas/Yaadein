@@ -36,7 +36,7 @@ export const posts = [
     mediaURL:
       "https://res.cloudinary.com/dqz5b6jq9/image/upload/v1688057101/3_xfyibi.jpg",
     likes: {
-      likeCount: 0,
+      likeCount: 2,
       likedBy: [],
       dislikedBy: [],
     },
@@ -323,7 +323,7 @@ export const posts = [
       dislikedBy: [],
     },
     comments: [],
-    username: "janedae",
+    username: "carlsmith",
     createdAt: "2022-04-10T10:55:06+05:30",
     updatedAt: formatDate(),
   },
