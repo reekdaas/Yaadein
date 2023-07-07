@@ -1,0 +1,89 @@
+.modalOverlay {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 2;
+  background-color: rgba(0, 0, 0, 0.7);
+  min-height: 108vh;
+}
+
+.postModalContainer {
+  display: flex;
+  flex-direction: column;
+
+  border: 2px solid var(--clr-gray-1);
+  border-radius: 1rem;
+  color: #fff;
+  background-color: var(--clr-black-3);
+  opacity: 1;
+  padding: 1.5rem 1rem;
+  z-index: 10;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  width: 30rem;
+
+  transform: translate(-50%, -50%);
+  margin: 2rem 0rem;
+}
+.heading {
+  font-size: 2rem;
+  text-align: center;
+}
+
+.createPostForm {
+  display: flex;
+  flex-grow: 1;
+  gap: 0.75rem;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.createPost {
+  background-color: inherit;
+  /* border: 1px solid #fff; */
+  border: none;
+  resize: none;
+  max-width: 30rem;
+  color: #fff;
+}
+
+.createPost:focus {
+  outline: none;
+}
+
+.createPostContainer {
+  display: flex;
+  padding: 0.5rem 0 0;
+  justify-content: space-between;
+  /* position: relative; */
+}
+
+.createPostEmoji {
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+
+.createPostBtn {
+  padding: 0.5rem 1rem;
+  border-radius: 5%;
+  border: none;
+  font-weight: 800;
+  cursor: pointer;
+  height: 2rem;
+  text-align: center;
+  background-color: var(--clr-black-1);
+  color: #fff;
+  letter-spacing: 0.3ch;
+}
+
+.createPostBtn:hover {
+  background-color: var(--clr-black-2);
+}
+.emojiPicker {
+  position: absolute;
+  top: 30%;
+  left: -70%;
+}
