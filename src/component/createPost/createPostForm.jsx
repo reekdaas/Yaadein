@@ -6,17 +6,20 @@ import { useNavigate } from "react-router";
 import { useState } from "react";
 import EmojiPicker from "emoji-picker-react";
 import { useDetectOutsideClick } from "../../hook/clickOutsideHandler";
-import { usePostContext } from "../../context";
+import { useAllUserContext, usePostContext } from "../../context";
 
 export default function CreatePostForm() {
   const [showEmoji, setShowEmoji] = useState(false);
   const [post, setPost] = useState({ content: "" });
-
+  const {
+    allUserData: { allUsers },
+  } = useAllUserContext();
   const { createPostByUser, btnDisabled } = usePostContext();
   const { userData } = useAuthContext();
   const navigate = useNavigate();
 
-  const { _id: userId, username, avatarUrl, firstName } = userData;
+  const userProfile = allUsers.find(({ _id }) => _id === userData?._id);
+  const { _id: userId, username, avatarUrl, firstName } = userProfile;
   let domNode = useDetectOutsideClick(() => {
     setShowEmoji(false);
   });
