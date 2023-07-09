@@ -42,12 +42,9 @@ export const unfollowUserService = async (unfollowUserId, encodedToken) =>
     { headers: { authorization: encodedToken } }
   );
 
-export const editUserService = async (dataInput, encodedToken) => {
-  console.log(dataInput);
-
-  return await axios.post(
+export const editUserService = async (dataInput, encodedToken) =>
+  await axios.post(
     "/api/users/edit",
     { userData: dataInput },
     { headers: { authorization: encodedToken } }
   );
-};

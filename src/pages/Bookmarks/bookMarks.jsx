@@ -11,22 +11,7 @@ export default function BookMarks() {
     allUserData: { bookmarkedPosts },
     isLoading,
   } = useAllUserContext();
-  console.log(bookmarkedPosts);
-
-  // const isElementPresent = allPosts?.some((post) =>
-  //   bookmarkedPosts.map((bookMark) => bookMark?._id === post?._id)
-  // );
-  // console.log(isElementPresent);
-
-  // const bookMarkPostList = allPosts
-  //   .filter((post) =>
-  //     bookmarkedPosts?.toReversed()?.find(({ _id }) => post?._id === _id)
-  //   )
-  //   ?.toReversed();
-
-  // console.log(bookMarkPostList);
-  // const removePost = bookmarkedPosts.filter((post) => post !== undefined);
-  // console.log(removePost);
+  // console.log(bookmarkedPosts);
 
   const bookMarkPostList = bookmarkedPosts
     ?.toReversed()
