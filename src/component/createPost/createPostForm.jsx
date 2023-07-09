@@ -18,8 +18,13 @@ export default function CreatePostForm() {
   const { userData } = useAuthContext();
   const navigate = useNavigate();
 
-  const userProfile = allUsers.find(({ _id }) => _id === userData?._id);
-  const { _id: userId, username, avatarUrl, firstName } = userProfile;
+  const userProfile = allUsers?.find(({ _id }) => _id === userData?._id);
+  const {
+    _id: userId,
+    username,
+    avatarUrl,
+    firstName,
+  } = userProfile || userData;
   let domNode = useDetectOutsideClick(() => {
     setShowEmoji(false);
   });
