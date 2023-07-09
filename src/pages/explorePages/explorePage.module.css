@@ -1,0 +1,18 @@
+.explorePage {
+  background-color: var(--clr-black-3);
+  min-height: 100vh;
+  display: flex;
+  justify-content: space-between;
+}
+
+.exploreContainer {
+  display: flex;
+  flex-direction: column;
+}
+
+.spinner {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transform: translate(0, 200%);
+}
