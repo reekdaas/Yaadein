@@ -19,9 +19,9 @@ export default function PostModal({ postData, handleModal, handleEditModal }) {
   const domNode = useDetectOutsideClick(() => {
     setShowEmoji(false);
   });
-  const postDomNode = useDetectOutsideClick(() => {
-    postData ? handleEditModal(false) : handleModal(false);
-  });
+  // const postDomNode = useDetectOutsideClick(() => {
+  //   postData ? handleEditModal(false) : handleModal(false);
+  // });
   const handleTextInputChange = (e) => {
     const { name, value } = e.target;
     postDispatch({ type: "UPDATE_POST", payload: { [name]: value } });
@@ -47,8 +47,14 @@ export default function PostModal({ postData, handleModal, handleEditModal }) {
   return createPortal(
     <div className={styles.postModal}>
       {" "}
-      <div className={styles.modalOverlay}></div>
-      <div className={styles.postModalContainer} ref={postDomNode}>
+      <div
+        className={styles.modalOverlay}
+        onClick={() => {
+          postData ? handleEditModal(false) : handleModal(false);
+          postDispatch({ type: "UPDATE_POST", payload: { content: "" } });
+        }}
+      ></div>
+      <div className={styles.postModalContainer}>
         <h2 className={styles.heading}>Create Post</h2>
         <form className={styles.createPostForm} onSubmit={handleSubmit}>
           <textarea
@@ -86,7 +92,15 @@ export default function PostModal({ postData, handleModal, handleEditModal }) {
               </div>
             )}
 
-            <button type="submit" className={styles.createPostBtn}>
+            <button
+              type="submit"
+              className={
+                !post?.content
+                  ? `${styles.createPostBtn} ${styles.disabledBtn}`
+                  : `${styles.createPostBtn}`
+              }
+              disabled={!post?.content}
+            >
               {postData ? "Update" : "Post"}
             </button>
           </div>
