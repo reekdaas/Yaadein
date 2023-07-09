@@ -1,18 +1,19 @@
 import { useState } from "react";
 import styles from "./login.module.css";
+import { BiSolidHide, BiShowAlt } from "react-icons/bi";
 import { useAuthContext } from "../../context/AuthContext";
-import { logInService } from "../../services/authService";
 import { useNavigate } from "react-router";
-
-const dummyData = {
-  username: "rittikdas",
-  password: "abcde",
-};
+import { dummyData } from "../../utils/constant";
+// import { useAllUserContext } from "../../context/userContext/allUserContext";
+// import { usePostContext } from "../../context/postContext/allPostsContext";
+import { AiOutlineArrowRight } from "react-icons/ai";
 
 export default function LogIn() {
   const navigate = useNavigate();
-  const { setToken, setUserData } = useAuthContext();
-
+  const { userLogIn } = useAuthContext();
+  // const { getAllUsersData } = useAllUserContext();
+  // const { getAllPosts } = usePostContext();
+  const [showPassword, setShowPassword] = useState(false);
   const [logInData, setLoginData] = useState({
     username: "",
     password: "",
@@ -22,10 +23,20 @@ export default function LogIn() {
 
     setLoginData((prevValue) => ({ ...prevValue, [name]: value }));
   };
-  const handleGuestSubmit = async () => {
-    setLoginData({ ...dummyData });
-    await logInService(dummyData, setToken, setUserData);
-    navigate("/");
+  const handleGuestSubmit = () => {
+    setLoginData((prev) => ({
+      ...prev,
+      username: dummyData?.username,
+      password: dummyData?.password,
+    }));
+    if (logInData?.username) {
+      userLogIn(logInData);
+    }
+  };
+  const handleLogin = () => {
+    userLogIn(logInData);
+    // getAllPosts()
+    // getAllUsersData()
   };
 
   return (
@@ -35,26 +46,47 @@ export default function LogIn() {
 
         <form className={styles.formPage}>
           <div className={styles.signInput}>
+            <label htmlFor="user">Username:</label>{" "}
             <input
+              id="user"
               type="text"
               placeholder="Enter Your Username"
               name="username"
               value={logInData.username}
               onChange={inputChangeHandler}
               required
-            />
+            />{" "}
+          </div>
+          <div className={styles.passwordWrapper}>
+            <label htmlFor="password">Password:</label>
             <input
-              type="text"
+              id="password"
+              type={showPassword ? "text" : "password"}
               placeholder="Enter Your Password"
               name="password"
               value={logInData.password}
               onChange={inputChangeHandler}
               required
             />
+            <span
+              onClick={() => {
+                setShowPassword((prev) => !prev);
+              }}
+            >
+              {showPassword ? <BiShowAlt /> : <BiSolidHide />}{" "}
+            </span>
           </div>
+
           <div className={styles.signInBtn}>
             <button
-              className={styles.signBtn}
+              className={styles.loginBtn}
+              type="button"
+              onClick={handleLogin}
+            >
+              Login
+            </button>
+            <button
+              className={styles.dummyLoginBtn}
               type="button"
               onClick={handleGuestSubmit}
             >
@@ -62,6 +94,15 @@ export default function LogIn() {
             </button>
           </div>
         </form>
+
+        <p
+          className={styles.createAcc}
+          onClick={() => {
+            navigate("/signup");
+          }}
+        >
+          Create New Account <span>{<AiOutlineArrowRight />}</span>
+        </p>
       </div>
     </div>
   );
