@@ -1,0 +1,25 @@
+.postEdit {
+  position: relative;
+}
+
+.btn {
+  cursor: pointer;
+}
+.editModal {
+  position: absolute;
+  padding: 1rem 0;
+  background-color: var(--clr-black-2);
+  right: -5%;
+  top: 90%;
+  border-radius: 1rem;
+  box-shadow: 0px 0px 19px -1px rgb(60, 60, 60);
+}
+
+.editModal > p {
+  padding: 0.3rem 1.5rem;
+  cursor: pointer;
+}
+
+.editModal > p:hover {
+  background-color: var(--clr-dark-3);
+}

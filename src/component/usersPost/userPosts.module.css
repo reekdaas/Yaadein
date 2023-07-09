@@ -1,0 +1,65 @@
+.userPost {
+  display: flex;
+  flex-direction: column;
+  border: 2px solid var(--clr-gray-1);
+  border-radius: 1rem;
+  padding: 1rem 2rem;
+  color: #fff;
+  max-width: 35rem;
+  margin: 1.5rem 0;
+}
+
+.userImage {
+  width: 50px;
+  height: 50px;
+  object-fit: cover;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.postHeader {
+  display: flex;
+  justify-content: space-between;
+  /* position: relative; */
+}
+
+.userInfo {
+  /* min-width: 10rem; */
+  display: flex;
+  gap: 0.75rem;
+}
+
+.userName > p {
+  padding: 0.1rem 0;
+}
+
+.postContainer {
+  padding: 1rem 0;
+
+  border-bottom: 1px solid var(--clr-gray-1);
+}
+
+.postFooter {
+  display: flex;
+  gap: 3rem;
+  padding: 0.5rem 0 0 0;
+  font-size: 1.5rem;
+}
+
+.likePost {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.likePost,
+.bookmarkPost {
+  cursor: pointer;
+}
+
+.inBookmark {
+  color: var(--clr-accent-4);
+}
+
+.alreadyLiked {
+  color: #d10303;
+}
