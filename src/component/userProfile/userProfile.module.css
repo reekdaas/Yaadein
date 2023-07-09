@@ -76,3 +76,7 @@
 .disabledBtn {
   cursor: not-allowed;
 }
+
+.userProfileFooterItem {
+  cursor: pointer;
+}

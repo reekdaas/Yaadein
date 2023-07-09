@@ -2,58 +2,12 @@ import { useNavigate } from "react-router";
 import { useDetectOutsideClick } from "../../hook/clickOutsideHandler";
 import styles from "./followersList.module.css";
 
-const data = [
-  {
-    _id: "79Gksh9otl",
-    firstName: "John",
-    lastName: "Doe",
-    username: "johndoe",
-    password: "johndoe123",
-    bio: "Hello World",
-    bookmarks: [],
-    avatarUrl:
-      "https://res.cloudinary.com/dqz5b6jq9/image/upload/v1688041213/5_u91fuz.jpg",
-    website: "https://google.com/",
-    createdAt: "https://adarshbalika.netlify.app",
-    // updatedAt: formatDate(),
-  },
-  {
-    _id: "79Gksh9otl",
-    firstName: "John",
-    lastName: "Doe",
-    username: "johndoe",
-    password: "johndoe123",
-    bio: "Hello World",
-    bookmarks: [],
-    avatarUrl:
-      "https://res.cloudinary.com/dqz5b6jq9/image/upload/v1688041213/5_u91fuz.jpg",
-    website: "https://google.com/",
-    createdAt: "https://adarshbalika.netlify.app",
-    // updatedAt: formatDate(),
-  },
-  {
-    _id: "79Gksh9otl",
-    firstName: "John",
-    lastName: "Doe",
-    username: "johndoe",
-    password: "johndoe123",
-    bio: "Hello World",
-    bookmarks: [],
-    avatarUrl:
-      "https://res.cloudinary.com/dqz5b6jq9/image/upload/v1688041213/5_u91fuz.jpg",
-    website: "https://google.com/",
-    createdAt: "https://adarshbalika.netlify.app",
-    // updatedAt: formatDate(),
-  },
-];
-
 export default function FollowersList({ handleModal, list, followers }) {
   const navigate = useNavigate();
   let domNode = useDetectOutsideClick(() => {
     handleModal(false);
   });
 
-  console.log(123);
   return (
     <div className={styles.followList} ref={domNode}>
       <p className={styles.followListHeading}>
