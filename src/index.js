@@ -6,6 +6,11 @@ import { makeServer } from "./server";
 import reportWebVitals from "./reportWebVitals";
 import { BrowserRouter } from "react-router-dom";
 import { AuthContextProvider } from "./context/AuthContext";
+import { UserContextProvider } from "./context/userContext/allUserContext";
+import {
+  AllPostContext,
+  PostContextProvider,
+} from "./context/postContext/allPostsContext";
 // import Mockma
 
 // Call make Server
@@ -16,7 +21,11 @@ root.render(
   <React.StrictMode>
     <BrowserRouter>
       <AuthContextProvider>
-        <App />
+        <UserContextProvider>
+          <PostContextProvider>
+            <App />
+          </PostContextProvider>
+        </UserContextProvider>
       </AuthContextProvider>
     </BrowserRouter>
   </React.StrictMode>
