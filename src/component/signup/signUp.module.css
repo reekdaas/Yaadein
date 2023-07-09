@@ -1,0 +1,105 @@
+.signupPage {
+  background-color: var(--clr-black-2);
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.signUpCard {
+  background-color: var(--clr-black-3);
+  color: var(--clr-gray-1);
+  font-weight: 700;
+  max-height: 34rem;
+  max-width: 25rem;
+  display: flex;
+  flex-direction: column;
+  padding: 1rem 1.25rem;
+  align-items: center;
+  width: 80%;
+  border-radius: 1%;
+}
+.signupContainer {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  gap: 1rem;
+  padding: 0.5rem 0;
+}
+
+.signupConainerRow,
+.signupConainerFirstRow,
+.passwordWrapper {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.signupConainerFirstRow {
+  flex-direction: row;
+}
+
+.signupConainerFirstRow > div > input,
+.signupConainerRow > input,
+.passwordWrapper > input {
+  padding: 0.5rem;
+  background-color: inherit;
+  border: 1px solid var(--clr-gray-1);
+  color: #ffd;
+  border-radius: 2%;
+}
+
+.signupConainerFirstRow > div > input:focus,
+.signupConainerRow > input:focus,
+.passwordWrapper > input:focus {
+  outline: none;
+  background-color: inherit;
+}
+
+.signUpBtn {
+  padding: 0.25rem 0.75rem;
+  border-radius: 2%;
+  border: none;
+  font-weight: 800;
+  font-size: 1rem;
+  cursor: pointer;
+  height: 3rem;
+  text-align: center;
+  background-color: var(--clr-dark-3);
+  color: #fff;
+  transition-property: background-color, color;
+  transition-duration: 500ms;
+  transition-delay: 200ms, 400ms;
+}
+
+.signUpBtn:hover {
+  background-color: var(--clr-dark-1);
+  color: var(--clr-black-1);
+}
+
+.signUpCard > h2 {
+  font-size: 1.75rem;
+}
+
+.alreayAcc {
+  color: var(--clr-lighten-3);
+  cursor: pointer;
+  transition-property: opacity;
+  transition-delay: 200ms;
+  transition-duration: 200ms;
+}
+
+.alreayAcc:hover {
+  opacity: 0.8;
+}
+
+/* .passwordWrapper {
+  position: relative;
+}
+
+.passwordWrapper > span {
+  position: absolute;
+  right: 3%;
+  top: 50%;
+} */
