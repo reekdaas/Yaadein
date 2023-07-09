@@ -1,0 +1,82 @@
+.sideBar {
+  display: flex;
+  flex-direction: column;
+  background-color: var(--clr-black-2);
+  padding: 1rem 2.5rem;
+  max-height: 100vh;
+  position: sticky;
+  top: 0px;
+}
+
+.sideBarHeading {
+  font-size: 2rem;
+  /* color: #dbdbdb; */
+  color: var(--clr-lighten-4);
+  font-weight: 800;
+  cursor: pointer;
+}
+
+.sideBarContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  padding: 2rem 0;
+  gap: 0.5rem;
+  list-style-type: none;
+}
+
+.navlink,
+.logOutBtn {
+  display: flex;
+  width: 100%;
+  gap: 1rem;
+  font-size: 1.5rem;
+  color: var(--clr-dark-1);
+  height: 3rem;
+  padding: 1rem 0;
+  text-align: center;
+  opacity: 1;
+  transition-property: opacity;
+  transition-duration: 200ms;
+  transition-delay: 200ms;
+}
+.navlink:hover,
+.createPostBtn:hover {
+  color: var(--clr-dark-1);
+  opacity: 0.8;
+  border-radius: 5%;
+  text-align: center;
+}
+
+.createPostBtn {
+  display: flex;
+  width: 100%;
+  gap: 1rem;
+  font-size: 1.5rem;
+  color: var(--clr-dark-1);
+  height: 3rem;
+  padding: 1rem 0;
+  text-align: center;
+  cursor: pointer;
+}
+.linkActive {
+  border-bottom: 2px solid var(--clr-dark-1);
+}
+
+.logOutBtn {
+  font-size: 1.75rem;
+  margin-top: 7rem;
+  background-color: var(--clr-black-2);
+  border: none;
+  cursor: pointer;
+  border-radius: 1rem;
+  font-weight: 800;
+  color: var(--clr-accent-3);
+  transition-property: opacity;
+  transition-duration: 200ms;
+  transition-delay: 200ms;
+}
+
+.logOutBtn:hover {
+  opacity: 0.8;
+}
