@@ -43,7 +43,7 @@ export default function PostModal({ postData, handleModal, handleEditModal }) {
     postDispatch({ type: "UPDATE_POST", payload: { content: "" } });
   };
 
-  console.log(post);
+  // console.log(post);
   return createPortal(
     <div className={styles.postModal}>
       {" "}
