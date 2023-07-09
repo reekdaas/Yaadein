@@ -1,0 +1,38 @@
+.filterContainer {
+  display: flex;
+  justify-content: space-between;
+  color: #fff;
+  padding: 1rem 0.5rem 0;
+  font-size: 1.5rem;
+  position: relative;
+}
+
+.filterDropdown {
+  padding: 1rem 0;
+  list-style-type: none;
+  background-color: var(--clr-black-2);
+  position: absolute;
+  right: -5%;
+  top: 90%;
+  border-radius: 1rem;
+  box-shadow: 0px 0px 19px -1px rgb(60, 60, 60);
+  /* width: ; */
+}
+
+.filterDropdown > li {
+  padding: 0.5rem 2rem;
+  cursor: pointer;
+}
+.filterDropdown > li:hover {
+  background-color: var(--clr-black-1);
+}
+
+.active {
+  border-top: 1px solid var(--clr-dark-3);
+
+  border-bottom: 1px solid var(--clr-dark-3);
+}
+
+.filterBtn {
+  cursor: pointer;
+}
