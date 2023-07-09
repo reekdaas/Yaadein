@@ -1,4 +1,6 @@
 .homePage {
   background-color: var(--clr-black-3);
   min-height: 100vh;
+  display: flex;
+  justify-content: space-between;
 }
