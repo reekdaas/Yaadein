@@ -1,0 +1,17 @@
+.bookmarkPage {
+  background-color: var(--clr-black-3);
+  min-height: 100vh;
+  display: flex;
+  justify-content: space-between;
+}
+
+.bookmarkPageContainer {
+  display: flex;
+  flex-direction: column;
+}
+
+.noBookMark {
+  color: #fff;
+  font-size: 2rem;
+  margin: 2rem auto;
+}
