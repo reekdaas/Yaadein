@@ -15,13 +15,13 @@ export function AuthContextProvider({ children }) {
   const userLogIn = async (userData) => {
     try {
       setLoading(true);
-      console.log(userData);
+      // console.log(userData);
       const response = await logInService(userData);
-      console.log(response);
+
       const {
         data: { encodedToken: token, foundUser },
       } = response;
-      console.log(response);
+
       localStorage.setItem("token", token);
       localStorage.setItem("userDetails", JSON.stringify(foundUser));
       setToken(token);
