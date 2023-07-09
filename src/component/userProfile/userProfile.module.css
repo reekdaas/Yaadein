@@ -1,0 +1,78 @@
+.UserDataContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  color: #fff;
+  border-bottom: 2px solid var(--clr-black-2);
+}
+
+.userDataPofileHeader {
+  display: flex;
+  justify-content: space-between;
+}
+
+.userDataUserName {
+  color: var(--clr-gray-1);
+}
+
+.profileEditBtn {
+  align-self: center;
+  padding: 0.25rem 0.75rem;
+  border-radius: 1rem;
+  border: none;
+  font-weight: 800;
+  font-size: 1rem;
+  cursor: pointer;
+  height: 3rem;
+  text-align: center;
+  background-color: var(--clr-dark-3);
+  color: #fff;
+  transition-property: background-color, color;
+  transition-duration: 500ms;
+  transition-delay: 200ms, 400ms;
+}
+
+.profileEditBtn:hover {
+  background-color: var(--clr-dark-1);
+  color: var(--clr-black-1);
+}
+
+.userProfileImage {
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.userProfileContent {
+  display: flex;
+  justify-content: space-between;
+}
+
+.userWebsite > span {
+  font-size: 1.2rem;
+}
+
+.userWebsiteLink {
+  list-style-type: none;
+  margin-left: 0.25rem;
+  color: var(--clr-accent-2);
+}
+
+.userJoinDate > span {
+  margin-left: 0.25rem;
+}
+
+.userProfileFooter {
+  padding: 0.5rem 0;
+  display: flex;
+  justify-content: space-around;
+  border-top: 2px solid var(--clr-black-2);
+  font-size: 1.2rem;
+  position: relative;
+}
+
+.disabledBtn {
+  cursor: not-allowed;
+}
