@@ -1,0 +1,29 @@
+.followedContainerSlider {
+  background-color: var(--clr-black-2);
+  min-width: 15vw;
+  padding: 1rem 2rem;
+  position: sticky;
+  max-height: 100vh;
+  top: 0px;
+  /* margin: 0 auto; */
+}
+
+.followedContainerSlider > h1 {
+  font-size: 2rem;
+  text-align: center;
+  color: var(--clr-lighten-4);
+  font-weight: 800;
+  margin-bottom: 1.5rem;
+}
+
+.followedContainer {
+  padding: 0rem 0.5rem;
+  border: 2px solid var(--clr-lighten-5);
+  border-radius: 2%;
+}
+
+.noSuggestion {
+  color: var(--clr-gray-1);
+  padding: 1.5rem 0;
+  text-align: center;
+}
