@@ -1,0 +1,15 @@
+.header {
+  min-height: 10vh;
+  background-color: var(--clr-black-3);
+  opacity: 0.9;
+  /* z-index: 50; */
+  position: sticky;
+  top: 0;
+  width: 45vw;
+  padding: 0.75rem 0;
+}
+
+.header > h2 {
+  color: #fff;
+  font-size: 1.7rem;
+}
