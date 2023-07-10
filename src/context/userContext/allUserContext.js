@@ -109,7 +109,7 @@ export function UserContextProvider({ children }) {
       toast.success("Remove From Bookmarks");
       // console.log(response);
     } catch (err) {
-      // console.log(err);
+      console.log(err);
       toast.error("Something Went Wrong!");
     } finally {
       setIsLoading(false);
