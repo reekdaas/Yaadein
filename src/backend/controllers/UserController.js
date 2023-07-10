@@ -171,6 +171,7 @@ export const bookmarkPostHandler = function (schema, request) {
  * */
 
 export const removePostFromBookmarkHandler = function (schema, request) {
+  // console.log(123);
   const { postId } = request.params;
   let user = requiresAuth.call(this, request);
   try {
@@ -201,6 +202,7 @@ export const removePostFromBookmarkHandler = function (schema, request) {
     );
     return new Response(200, {}, { bookmarks: user.bookmarks });
   } catch (error) {
+    // console.log("err", error);
     return new Response(
       500,
       {},
