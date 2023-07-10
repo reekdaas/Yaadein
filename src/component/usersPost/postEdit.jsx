@@ -20,12 +20,12 @@ export default function PostEdit({ post }) {
     setShowModal(false);
   });
 
-  // const isPostInBookmark = isPostAlreadyInBookmark(bookmarkedPosts, post);
+  const isPostInBookmark = isPostAlreadyInBookmark(bookmarkedPosts, post);
 
   const handleDelete = () => {
-    // if (isPostInBookmark) {
-    //   // removePostFromBookmark(isPostInBookmark?._id);
-    // }
+    if (isPostInBookmark) {
+      removePostFromBookmark(isPostInBookmark?._id);
+    }
     deletePost(post?._id);
   };
   const handleEdit = () => {

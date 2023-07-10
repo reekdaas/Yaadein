@@ -116,7 +116,7 @@ export function PostContextProvider({ children }) {
   };
 
   const deletePost = async (postId) => {
-    console.log(postId);
+    // console.log(postId);
     try {
       setIsLoading(true);
 
