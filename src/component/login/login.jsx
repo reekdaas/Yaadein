@@ -29,14 +29,14 @@ export default function LogIn() {
       username: dummyData?.username,
       password: dummyData?.password,
     }));
+
+    // userLogIn(logInData);
     if (logInData?.username) {
       userLogIn(logInData);
     }
   };
   const handleLogin = () => {
     userLogIn(logInData);
-    // getAllPosts()
-    // getAllUsersData()
   };
 
   return (

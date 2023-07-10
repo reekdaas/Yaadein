@@ -3,7 +3,7 @@ import { BsLink45Deg } from "react-icons/bs";
 import { SlCalender } from "react-icons/sl";
 import { getDate } from "../../utils/dateUtils";
 import { useAuthContext } from "../../context/AuthContext";
-import Spinner from "../spinner/spinner";
+// import Spinner from "../spinner/spinner";
 import { useAllUserContext } from "../../context";
 import { useState } from "react";
 import FollowersList from "../followers/followersList";
@@ -12,7 +12,7 @@ import EditProfileModal from "../editProfile/editProfileModal";
 export default function UserProfile({ userData, numberOfPosts }) {
   const {
     followUserMethod,
-    allUserData: { currentUser },
+    // allUserData: { currentUser },
     userDispatch,
     isBtnDisabled,
     unfollowUserMethod,
