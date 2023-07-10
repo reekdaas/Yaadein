@@ -16,7 +16,7 @@ export const addToBookmarkService = async (postId, encodedToken) =>
 
 export const removePostFromBookmarkService = async (postId, encodedToken) =>
   await axios.post(
-    `api/users/remove-bookmark/${postId}`,
+    `/api/users/remove-bookmark/${postId}`,
     {},
     { headers: { authorization: encodedToken } }
   );
