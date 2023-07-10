@@ -85,7 +85,7 @@ export const users = [
     bookmarks: [],
     avatarUrl:
       "https://res.cloudinary.com/dqz5b6jq9/image/upload/v1688041213/3_ddoadg.jpg",
-    website: "https://adarshbalika.netlify.app",
+    website: "https://rittikdaas.netlify.app/",
     createdAt: "2023-06-10T10:55:06+05:30",
     updatedAt: formatDate(),
   },
